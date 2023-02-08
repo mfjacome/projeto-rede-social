@@ -5,13 +5,15 @@ Projeto integrador como forma de conclusão do treinamento com a Generation, tem
 
 ## Diagrama de Entidade e Relacionamento (DER)
 
-![svg db](https://user-images.githubusercontent.com/43019744/217561358-646052d0-bced-462c-9e5f-5c0a34f4af52.svg)
+![svg db-cropped](https://user-images.githubusercontent.com/43019744/217568705-e14fe79f-0442-4458-867d-a44869b8f02e.svg)
 
 <br>
 
-Objetivos de Desenvolvimento Sustentável - ODS 2 : Objetivo 2. Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável. Página: https://brasil.un.org/pt-br/sdgs/2 
+## Escopo do projeto
 
-Escopo do projeto: Iremos atuar nos subitens: 2.1 e 2.2, tendo como foco:
+Objetivos de Desenvolvimento Sustentável - ODS 2 : Objetivo 2. Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável. Página: https://brasil.un.org/pt-br/sdgs/2.
+
+Iremos atuar nos subitens: 2.1 e 2.2, tendo como foco:
 
 **2.1** Até 2030, acabar com a fome e garantir o acesso de todas as pessoas, em particular os pobres e pessoas em situações vulneráveis, incluindo crianças, a alimentos seguros, nutritivos e suficientes durante todo o ano.
 
