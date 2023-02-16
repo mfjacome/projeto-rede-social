@@ -1,5 +1,6 @@
 package com.generation.redesocial.repository;
 
+
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,6 +12,6 @@ import com.generation.redesocial.model.Tema;
 @Repository
 public interface TemaRepository extends JpaRepository<Tema, Long> {
 	
-	public List<Tema> findAllByDescricaoContainingIgnoreCase(@Param("assunto") String assunto);
+	public List<Tema> findByAssuntoContainingIgnoreCase(@Param ("assunto")String assunto);
 
 }
