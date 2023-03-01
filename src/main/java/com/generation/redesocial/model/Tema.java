@@ -1,11 +1,10 @@
 package com.generation.redesocial.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_tema")
@@ -20,6 +19,10 @@ public class Tema {
 	
 	@NotNull (message = "O atributo aprovação é obrigatório")
 	private boolean aprovacao;
+
+	@OneToMany(mappedBy = "tema", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("tema")
+	private List<Postagem> postagem;
 
 	public Long getId() {
 		return id;
@@ -45,4 +48,11 @@ public class Tema {
 		this.aprovacao = aprovacao;
 	}
 
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
 }
