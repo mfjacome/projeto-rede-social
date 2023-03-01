@@ -1,10 +1,7 @@
 package com.generation.redesocial.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -19,6 +16,10 @@ public class Postagem {
 	@NotBlank(message = "Caixa de texto não deve ser vazio, digite algo.")
 	@Size(min = 5, max = 500)
 	private String caixatexto;
+
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Tema tema;
 
 	public Long getId() {
 		return id;
@@ -35,4 +36,13 @@ public class Postagem {
 	public void setCaixatexto(String caixatexto) {
 		this.caixatexto = caixatexto;
 	}
+
+	public Tema getTema() {
+		return tema;
+	}
+
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
 }
+
