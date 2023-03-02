@@ -3,7 +3,7 @@ package com.generation.redesocial.controller;
 import com.generation.redesocial.model.Postagem;
 import com.generation.redesocial.repository.PostagemRepository;
 import com.generation.redesocial.repository.TemaRepository;
-import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +12,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/postagem")

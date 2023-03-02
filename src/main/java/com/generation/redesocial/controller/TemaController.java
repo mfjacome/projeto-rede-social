@@ -3,6 +3,8 @@ package com.generation.redesocial.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +23,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.generation.redesocial.model.Tema;
 import com.generation.redesocial.repository.TemaRepository;
 
-import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/temas")

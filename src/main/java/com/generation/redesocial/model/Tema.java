@@ -1,10 +1,18 @@
 package com.generation.redesocial.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+
 
 import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tb_tema")
@@ -17,7 +25,7 @@ public class Tema {
 	@NotNull(message = "O atributo assunto é obrigatório")
 	private String assunto;
 	
-	@NotNull (message = "O atributo aprovação é obrigatório")
+	@NotNull(message = "O atributo aprovação é obrigatório")
 	private boolean aprovacao;
 
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.REMOVE)

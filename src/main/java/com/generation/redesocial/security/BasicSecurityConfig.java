@@ -15,8 +15,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class BasicSecurityConfig {
-
-    @Bean
+	
+	@Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
@@ -34,17 +34,16 @@ public class BasicSecurityConfig {
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and().csrf().disable()
             .cors();
-        
+
         http
-        	.authorizeHttpRequests((auth) -> auth
-        			.antMatchers("/usuarios/logar").permitAll()
-        			.antMarchers("/usuarios/cadastrar").permitAll()
-        			.antMarchers(HttpMethod.OPTIONS).permitAll()
-        			.anyRequest().authenticated())
-        	.httpBasic();
+            .authorizeHttpRequests((auth) -> auth
+                .antMatchers("/usuarios/logar").permitAll()
+                .antMatchers("/usuarios/cadastrar").permitAll()
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
+                .anyRequest().authenticated())
+            .httpBasic();
 
         return http.build();
 
     }
-
 }

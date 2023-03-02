@@ -3,6 +3,8 @@ package com.generation.redesocial.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +22,7 @@ import com.generation.redesocial.model.UsuarioLogin;
 import com.generation.redesocial.repository.UsuarioRepository;
 import com.generation.redesocial.service.UsuarioService;
 
-import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/usuarios")
