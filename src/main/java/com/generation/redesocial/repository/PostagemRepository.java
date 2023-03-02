@@ -16,10 +16,4 @@ public interface PostagemRepository extends JpaRepository<Postagem, Long>{
 
     public List<Postagem>findAllByCaixatextoContainingIgnoreCase(@Param("caixatexto") String texto);
 
-
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> fd8e7bcdc1f949e1446ba920bd363868da3f07a2
