@@ -44,6 +44,7 @@ public class UsuarioController {
     
     @GetMapping("/all")
     public ResponseEntity <List<Usuario>> getAll(){
+    	System.out.println("testando");
         return ResponseEntity.ok(usuarioRepository.findAll());
     }
     
